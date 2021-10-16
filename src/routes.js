@@ -1,5 +1,7 @@
 import { Router } from "express";
 
+import UsersAdminController from './app/controllers/usersAdminController';
+
 import { GenericError } from './app/class/Error';
 
 
@@ -14,5 +16,11 @@ routes.get('/', (req, res, next) => {
         next(error);
     }
 });
+
+//routes.get('/list/users', UsersAdminController.index);
+routes.post('/create/users', UsersAdminController.store);
+//routes.put('/users/:id', UsersAdminController.update);
+
+
 
 export default routes;
