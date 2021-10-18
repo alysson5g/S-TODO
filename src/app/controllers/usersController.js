@@ -8,7 +8,7 @@ class UsersController {
                 email: req.email,
                 password: req.password,
                 password_hash: req.password_hash,
-                profile_admin: false,
+                profile_admin: true,
                 enabled: true,
             };
 

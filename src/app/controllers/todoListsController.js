@@ -1,15 +1,11 @@
-import CreateUsers from '../services/usersService';
+import CreatetodoLists from '../services/todoListsService';
 
-class UsersController {
+class TodoListsController {
     async store(req, res) {
         try {
             const dataUser = {
                 name: req.name,
-                email: req.email,
-                password: req.password,
-                password_hash: req.password_hash,
-                profile_admin: false,
-                enabled: true,
+
             };
 
             const createUser = new CreateUsers();
@@ -23,4 +19,4 @@ class UsersController {
         }
     }
 }
-export default new UsersController();
+export default new TodoListsController();
