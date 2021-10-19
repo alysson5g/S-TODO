@@ -2,18 +2,18 @@ import Sequelize, { Model } from 'sequelize';
 import bcrypt from 'bcryptjs';
 
 class users extends Model {
-    static init(sequelize) {
+    static init(sequelize, DataTypes) {
         super.init(
             {
                 name: Sequelize.STRING,
                 email: Sequelize.STRING,
                 password: Sequelize.VIRTUAL,
                 password_hash: Sequelize.STRING,
-                profile_admin: Sequelize.BOOLEAN,
-                enabled: Sequelize.BOOLEAN,
+
             },
             {
                 sequelize,
+
             }
         );
 

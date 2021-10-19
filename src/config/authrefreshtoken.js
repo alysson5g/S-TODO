@@ -1,4 +1,4 @@
 export default {
-  secret: process.env.REFRESHTOKEN,
-  expiresIn: '60d',
+  secret: "WXXNS9kd1NI$a4bogIAlRJcDLOndI8LlKdFFG3",
+  expiresIn: 60,
 };

@@ -1,7 +1,7 @@
 import Jwt from 'jsonwebtoken';
 import { promisify } from 'util';
 
-import Users from '../models/users';
+import Users from '../models/Users';
 import JwtHelper from '../helpers/JwtHelper';
 import authrefreshtoken from '../../config/authrefreshtoken';
 import { client } from '../../config/redisconfig';

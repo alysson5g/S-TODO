@@ -10,23 +10,23 @@ import { client } from '../../config/redisconfig';
 
 class JwtHelper {
   async singAcessToken(user) {
-    try {
-      const { id, name } = user;
 
-      const token = Jwt.sign({ id, name }, authConfig.secret, {
-        expiresIn: authConfig.expiresIn,
-      });
-      client.set(`${id}Token`, token, 'EX', 30 * 60 * 60, (err, result) => {
-        if (err) {
-          console.log(err.message);
-          reject(createHttpError.InternalServerError());
-        }
-        return result;
-      });
-      return token;
-    } catch (error) {
-      throw error.message;
-    }
+    const { id, name } = user;
+
+    const token = Jwt.sign({ id, name }, authConfig.secret, {
+      expiresIn: authConfig.expiresIn,
+    });
+    client.set(`${id}Token`, token, 'EX', 30 * 60 * 60, (err, result) => {
+      if (err) {
+        console.log(err.message);
+        reject(createHttpError.InternalServerError());
+      }
+      console.log(result);
+
+      return result;
+    });
+    return token;
+
   }
 
   async singAcessRefreshToken(user) {
@@ -41,6 +41,7 @@ class JwtHelper {
         console.log(err.message);
         reject(createHttpError.InternalServerError());
       }
+      console.log("refresh", refreshtoken)
       return refreshtoken;
     });
     return refreshtoken;

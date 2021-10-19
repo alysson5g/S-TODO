@@ -6,7 +6,7 @@ function errorHandler(err, req, res, next) {
     const { message, status } = err;
 
     res.status = status || 500;
-    console.log(err);
+    console.log('enter on error', err);
     // res.json({ success: false, error: message });
     if (err instanceof AppError) {
         res.json({ success: false, error: message });

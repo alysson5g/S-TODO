@@ -1,8 +1,8 @@
-import CreateTodoList from '../services/TodoListsService';
+import CreateUsers from '../services/UsersService';
 
 
 
-class TodoListController {
+class UsersController {
 
 
     async store(req, res, next) {
@@ -39,4 +39,4 @@ class TodoListController {
         }
     }
 }
-export default new TodoListController();
+export default new UsersController();

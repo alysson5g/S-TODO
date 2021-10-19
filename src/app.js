@@ -2,10 +2,12 @@ import express from 'express';
 import cors from 'cors';
 
 import routes from './routes';
-import './config/database';
-
+import './database';
+import './config/redisconfig';
 import errorHandler from './app/middlewares/error';
 import notFoundError from './app/middlewares/notFoundError';
+
+require('dotenv').config()
 
 class App {
     constructor() {
@@ -13,6 +15,7 @@ class App {
         this.cors();
         this.routes();
         this.middlewares();
+
     }
 
     cors() {
@@ -41,4 +44,4 @@ class App {
     }
 }
 
-export default new App().server;
+module.exports = new App().server;

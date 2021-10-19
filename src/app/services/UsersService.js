@@ -1,23 +1,28 @@
-import Users from '../models/users';
+import Users from '../models/Users';
 
 class CreateUsers {
-    async createusers(data) {
+    async Createusers(data) {
         console.log('enter create User');
+
         try {
             const result = {
+
                 name: data.name,
                 email: data.email,
                 password: data.password,
-                password_hash: data.password_hash,
                 profile_admin: data.profile_admin,
                 enabled: data.enabled,
             };
 
+
             const newUser = await Users.create(result);
+
+
             return newUser;
         } catch (error) {
-            console.log('error create User');
-            return error.message;
+            // console.log('error create User');
+            // return error.message;
+            throw error;
         }
     }
 }
