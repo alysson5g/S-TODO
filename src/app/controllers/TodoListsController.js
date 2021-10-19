@@ -1,3 +1,6 @@
+
+
+
 import CreateTodoList from '../services/TodoListsService';
 
 
@@ -8,25 +11,23 @@ class TodoListController {
     async store(req, res, next) {
 
         try {
-            const dataUser = {
+            const UserID = (req.userId);
+            const dataTodoList = {
 
                 name: req.body.name,
-                email: req.body.email,
-                password: req.body.password,
-                profile_admin: true,
-                enabled: true,
+                id: UserID,
             };
 
 
 
 
-            const createUser = new CreateUsers();
+            const createTodoList = new CreateTodoList();
 
-            const newUser = await createUser.Createusers(dataUser);
+            const newTodoList = await createTodoList.Createtodolists(dataTodoList);
 
             const result = {
-                name: newUser.name,
-                email: newUser.email,
+                name: newTodoList.name,
+
             }
 
 

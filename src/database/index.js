@@ -1,11 +1,11 @@
 import Sequelize from 'sequelize';
-import todoEntries from '../app/models/todoEntries';
-import todoLists from '../app/models/todoLists';
+import TodoEntries from '../app/models/TodoEntries';
+import TodoLists from '../app/models/TodoLists';
 import Users from '../app/models/Users';
 
 import databaseConfig from '../config/database';
 
-const models = [Users, todoEntries, todoLists];
+const models = [Users, TodoEntries, TodoLists];
 
 
 class Database {

@@ -22,6 +22,7 @@ export default async (req, res, next) => {
     console.log('middleware 4');
 
     req.userId = decoded.id;
+
     console.log(req.userId);
 
     return next();
