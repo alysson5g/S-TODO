@@ -27,15 +27,15 @@
 
 ## :bookmark: Sobre
 
-O <strong>Ecoleta</strong> é uma aplicação Web e Mobile para ajudar pessoas a encontrarem pontos de coleta para reciclagem.
+O <strong>TODOS Ubistart</strong> é uma aplicação Web para registro e acompanhamento de TODOS.
 
-Essa aplicação foi construída na trilha <strong>Booster</strong> da <strong>Next Level Week</strong> distribuída pela [Rocketseat](https://rocketseat.com.br/). A ideia de criar uma aplicação voltada ao meio ambiente surgiu da coincidência da data do curso e a data da <strong>semana do meio ambiente</strong>
-
+Essa aplicação foi construída como teste da empresa <strong>Ubistart</strong> 
+    
 <a id="documentacao"></a>
 
 ## :books: Documentação
 
-Para reforçar alguns conceitos e registrar comandos que são dificeis de se lembrar eu fiz uma pequena **[DOCUMENTAÇÃO](DOCUMENTATION.md)** para ajudar quem esta iniciando com **TypeScript**, **Node**, **ReactJS** e **React Native**.
+Para reforçar alguns conceitos e registrar comandos que são dificeis de se lembrar eu fiz uma pequena **[DOCUMENTAÇÃO](DOCUMENTATION.md)** 
 
 <a id="tecnologias-utilizadas"></a>
 
@@ -43,10 +43,12 @@ Para reforçar alguns conceitos e registrar comandos que são dificeis de se lem
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias
 
-- [TypeScript](https://www.typescriptlang.org/)
 - [Node.js](https://nodejs.org/en/)
-- [ReactJS](https://reactjs.org/)
-- [React Native](https://reactnative.dev/)
+- [Express.js](https://expressjs.com/pt-br/)
+- [MySQL](https://www.mysql.com/)
+- [redis](https://redis.io/)
+- [docker](https://www.docker.com/)        
+    
 
 ## :heavy_check_mark: Resultado:
 
