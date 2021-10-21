@@ -1,6 +1,6 @@
 import Todolist from '../models/TodoLists';
 
-class CreatetodoLists {
+class ServicetodoLists {
     async Createtodolists(data) {
         console.log('enter create todoLists');
 
@@ -18,4 +18,4 @@ class CreatetodoLists {
     }
 }
 
-export default CreatetodoLists;
+export default ServicetodoLists;

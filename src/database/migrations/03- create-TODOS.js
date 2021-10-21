@@ -15,6 +15,13 @@ module.exports = {
                 onUpdate: 'CASCADE',
                 onDelete: 'SET NULL',
             },
+            user_id: {
+                type: Sequelize.INTEGER,
+                allowNull: true,
+                references: { model: 'users', key: 'id' },
+                onUpdate: 'CASCADE',
+                onDelete: 'SET NULL',
+            },
 
             title: {
                 type: Sequelize.STRING,
@@ -41,6 +48,11 @@ module.exports = {
                 type: Sequelize.BOOLEAN,
                 defaultValue: false,
                 allowNull: false,
+
+            },
+            completed_date: {
+                type: Sequelize.DATE,
+                allowNull: true,
             },
             enabled: {
                 type: Sequelize.BOOLEAN,

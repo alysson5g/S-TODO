@@ -11,11 +11,11 @@ class TodoListController {
     async store(req, res, next) {
 
         try {
-            const UserID = (req.userId);
+
             const dataTodoList = {
 
                 name: req.body.name,
-                id: UserID,
+
             };
 
 

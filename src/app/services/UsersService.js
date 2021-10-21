@@ -1,6 +1,6 @@
 import Users from '../models/Users';
 
-class CreateUsers {
+class ServiceUsers {
     async Createusers(data) {
         console.log('enter create User');
 
@@ -27,4 +27,4 @@ class CreateUsers {
     }
 }
 
-export default CreateUsers;
+export default ServiceUsers;
