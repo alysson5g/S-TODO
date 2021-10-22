@@ -10,7 +10,6 @@
 # Índice
 
 - [Sobre](#sobre)
-- [Documentação](#documentacao)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Como Usar](#como-usar)
 - [Como Contribuir](#como-contribuir)
@@ -23,12 +22,7 @@ O <strong>TODOS Ubistart</strong> é uma aplicação Web para registro e acompan
 
 Essa aplicação foi construída como teste da empresa <strong>Ubistart</strong> 
     
-<a id="documentacao"></a>
-
-## :books: Documentação
-
-Para reforçar alguns conceitos e registrar comandos que são dificeis de se lembrar eu fiz uma pequena **[DOCUMENTAÇÃO](DOCUMENTATION.md)** 
-
+  
 <a id="tecnologias-utilizadas"></a>
 
 ## :rocket: Tecnologias Utilizadas
@@ -86,6 +80,82 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 
 - ### :twisted_rightwards_arrows: **Testando Rotas**
 
+ - *Create User*
+ - Criar usuario da Aplicação
+
+ ROTA:  localhost/create/users
+
+Exemplo Body: 
+  
+{
+	"name":"Fulano beltrano",
+  "password":"??????????",
+	"email":"usuarioexemplo@gmail.com"
+}
+  ![Captura de tela de 2021-10-22 16-59-27](https://user-images.githubusercontent.com/62367153/138522609-a71baf55-5bca-4421-b207-36f1d032e1de.png)
+
+  
+  - *Login User*
+ - Realizar login do usuário criar Token de Autenticação.
+  
+  ROTA:  localhost/sessions
+  
+  Exemplo Body: 
+  
+  {
+	"email": "usuarioexemplo@gmail.com",
+	"password":"??????????"
+}
+
+  ![Captura de tela de 2021-10-22 17-47-14](https://user-images.githubusercontent.com/62367153/138526565-3e048b2a-4dd2-4a4a-a09f-cbb3fecf361c.png)
+
+  
+- *Create TodosList*
+ - Criar Lista de TODOS
+
+ROTA: localhost/create/todolist
+  
+  Exemplo Body: 
+  
+  {
+	"name":"Lista de tarefas profissionais"
+  
+  }
+  
+  
+  ![Captura de tela de 2021-10-22 17-28-17](https://user-images.githubusercontent.com/62367153/138524935-65773d51-c0a5-417b-825e-77a0fd3bb234.png)
+
+  
+  - *Create TodosEntries*
+ - Criar um TODO
+
+  ROTA: localhost/create/todoentries
+  
+  
+  {
+  					"title": "Exemplo de tarefa pendente",
+            "todolists_id": 1,
+           	"description": "Exemplo de descrição da tarefa pendente",
+            "due_date": "10/22/2021" 
+          
+  
+}
+  
+  ![Captura de tela de 2021-10-22 17-40-48](https://user-images.githubusercontent.com/62367153/138526079-161b8bee-cf00-45f8-b9be-5facef0b490c.png)
+
+  - *Complete TodosEntries*
+ - Finalizar um TODO
+  
+  ROTA: localhost/complete/todoentries
+  
+  { "id": 1,
+  "completed": true
+  
+}
+  
+  ![Captura de tela de 2021-10-22 17-55-26](https://user-images.githubusercontent.com/62367153/138527239-196a43f5-fa93-49ab-bac7-98c02ebbaa81.png)
+
+  
 <a id="como-contribuir"></a>
 
 ## :recycle: Como contribuir
