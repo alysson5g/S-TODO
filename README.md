@@ -1,18 +1,10 @@
-<h3 align="center">
-    <img alt="Logo" title="#logo" width="300px" src="images/logo.png">
-    <br><br>
-    <b>Recicle! ajude o meio ambiente!</b> 
-</h3>
 
 <p align="center">
-  <a href="https://rocketseat.com.br">
-    <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%237519C1">
+
+ 
+  <a href="https://www.linkedin.com/in/programadoralysson/">
+    <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Alysson Tavares-%237519C1">
   </a>
-  <a href="https://www.linkedin.com/in/matheus-lopes-394240151/">
-    <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Matheus Lopes-%237519C1">
-  </a>
-  <a>
-  <img alt="License" src="https://img.shields.io/github/license/vitorserrano/ecoleta?color=%237519C1">
 </p>
 
 # Índice
