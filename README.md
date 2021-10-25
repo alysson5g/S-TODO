@@ -36,13 +36,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 - [docker](https://www.docker.com/)        
     
 
-## :heavy_check_mark: Resultado:
 
-- O layout está disponível no **[Figma](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/)**;
-
-<h1 align="center">
-    <img alt="Web" src="images/VideoWeb.gif" width="900px">
-</h1>
 
 <a id="como-usar"></a>
 
@@ -53,6 +47,11 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
   - É **necessário** possuir o **[Node.js](https://nodejs.org/en/)** instalado na máquina
   - Também, é **preciso** ter um gerenciador de pacotes seja o **[NPM](https://www.npmjs.com/)** ou **[Yarn](https://yarnpkg.com/)**.
   - Por fim, é **essencial** ter o **[Docker](https://www.docker.com/get-started)** instalado de forma global na máquina
+	
+# Observação: Como estamos trabalhando uma aplicação com finalizadade de teste, disponibilizei
+  o arquivo .env no repositório para facilitar a execução deste teste. 
+  Deixando claro a conciencia de não ser uma boa pratica para aplicações reais. 
+
 
 1. Faça um clone :
 
