@@ -1,11 +1,11 @@
 module.exports = {
-    dialect: 'mysql',
+    dialect: process.env.DBDIALECT,
     // dialectOptions: 'mysql2',
-    host: 'localhost',
-    username: 'ubistart',
-    password: '321',
-    database: 'testeubi',
-    port: '3306',
+    host: process.env.HOST,
+    username: process.env.DBUSERNAME,
+    password: process.env.DBPASSWORD,
+    database: process.env.DBDATABASE,
+    port: process.env.DBPORT,
     define: {
         timestamps: true,
         underscored: true,
