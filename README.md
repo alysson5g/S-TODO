@@ -215,6 +215,7 @@ OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, inf
  - Filtrar TODOS em atraso
 	
 OBS: - Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
+
      - Para listar apenas os atrasados colocar "filter" como true
 	
   
