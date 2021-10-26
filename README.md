@@ -214,9 +214,9 @@ OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, inf
  - Listar os TODOS de todos os usuários
  - Filtrar TODOS em atraso
 	
-OBS: - Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
+OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
 
-	OBS: - Para listar apenas os atrasados colocar "filter" como true
+OBS: Para listar apenas os atrasados colocar "filter" como true
 	
   
   ROTA: localhost/todos
