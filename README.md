@@ -128,6 +128,8 @@ Exemplo Body:
 - *Create TodosList*
  - Criar Lista de TODOS
 
+OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
+
 ROTA: localhost/create/todolist
   
   Exemplo Body: 
@@ -144,6 +146,8 @@ ROTA: localhost/create/todolist
   - *Create TodosEntries*
  - Criar um TODO
 
+OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
+	
   ROTA: localhost/create/todoentries
   
    Exemplo Body: 
@@ -163,6 +167,8 @@ ROTA: localhost/create/todolist
   - *Complete TodosEntries*
  - Finalizar um TODO
   
+OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
+	
   ROTA: localhost/complete/todoentries
 	
    Exemplo Body: 
@@ -178,6 +184,8 @@ ROTA: localhost/create/todolist
  - *Update TodosEntries*
  - Atualizar um TODO
   
+OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
+	
   ROTA: localhost/update/todoentries
 	
    Exemplo Body: 
@@ -196,6 +204,8 @@ ROTA: localhost/create/todolist
  - *GET TodosEntries*
  - Listar os TODOS do Usuário logado
   
+OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
+	
   ROTA: localhost/todos/user
   
    ![Captura de tela de 2021-10-26 17-08-19](https://user-images.githubusercontent.com/62367153/138961242-525a7712-cbec-4abe-92fb-12ea5bfdf7a0.png)
@@ -204,7 +214,9 @@ ROTA: localhost/create/todolist
  - Listar os TODOS de todos os usuários
  - Filtrar TODOS em atraso
 	
-	Obs: Para listar apenas os atrasados colocar "filter" como true
+OBS: -Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
+     -Para listar apenas os atrasados colocar "filter" como true
+	
   
   ROTA: localhost/todos
 	
