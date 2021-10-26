@@ -68,7 +68,9 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 
   ## Crie o banco de dados
   $ docker run -d --name dbubi -p 3306:3306 -e MYSQL_DATABASE=testeubi -e MYSQL_USER=ubistart -e MYSQL_PASSWORD=321 mysql
+	
   $ docker run --name redisUbistart -p 7051:6379 -d redis
+	
   $ yarn sequelize-cli db:migrate
    
 
