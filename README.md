@@ -48,7 +48,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
   - Também, é **preciso** ter um gerenciador de pacotes seja o **[NPM](https://www.npmjs.com/)** ou **[Yarn](https://yarnpkg.com/)**.
   - Por fim, é **essencial** ter o **[Docker](https://www.docker.com/get-started)** instalado de forma global na máquina
 	
-# Observação: Como estamos trabalhando uma aplicação com finalizadade de teste, disponibilizei
+  Observação: Como estamos trabalhando uma aplicação com finalizadade de teste, disponibilizei
   o arquivo .env no repositório para facilitar a execução deste teste. 
   Deixando claro a conciencia de não ser uma boa pratica para aplicações reais. 
 
