@@ -23,7 +23,8 @@
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.2",
     "redis": "^3.1.2",
-    "sequelize": "^6.7.0"
+    "sequelize": "^6.7.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "cli": "^1.0.1",

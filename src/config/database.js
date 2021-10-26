@@ -1,5 +1,7 @@
+require('dotenv').config();
+
 module.exports = {
-    dialect: process.env.DBDIALECT,
+    dialect: 'mysql',
     // dialectOptions: 'mysql2',
     host: process.env.HOST,
     username: process.env.DBUSERNAME,

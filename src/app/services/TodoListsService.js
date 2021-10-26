@@ -2,7 +2,7 @@ import Todolist from '../models/TodoLists';
 
 class ServicetodoLists {
     async Createtodolists(data) {
-        console.log('enter create todoLists');
+        console.log('enter create todoLists', data.name);
 
 
 

@@ -5,6 +5,12 @@ class todoEntries extends Model {
     static init(sequelize) {
         super.init(
             {
+                id: {
+                    allowNull: false,
+                    primaryKey: true,
+                    type: Sequelize.UUID,
+                    defaultValue: Sequelize.UUIDV4,
+                },
                 title: Sequelize.STRING,
                 description: Sequelize.STRING,
                 due_date: Sequelize.DATE,

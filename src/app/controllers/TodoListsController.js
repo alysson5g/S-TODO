@@ -27,6 +27,7 @@ class TodoListController {
 
             const result = {
                 name: newTodoList.name,
+                id: newTodoList.id
 
             }
 

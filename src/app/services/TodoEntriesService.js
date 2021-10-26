@@ -3,7 +3,7 @@ import { formatISO } from 'date-fns'
 import { Op } from 'sequelize';
 import Todoentries from '../models/TodoEntries';
 
-import GenericError from '../class/Error'
+
 import users from '../models/Users';
 
 class ServicetodoEntries {
@@ -67,7 +67,7 @@ class ServicetodoEntries {
         const Todo = await Todoentries.findByPk(data.id);
 
         if (Todo.completed === true) {
-            throw new GenericError('This TODO is complete.');
+            throw ({ message: ('The Todo is completed, so you cannot change it.') });
 
 
 
@@ -96,6 +96,15 @@ class ServicetodoEntries {
     }
 
     async findAdmTodo(data) {
+
+        const typeUser = await users.findByPk(data.userId);
+
+        if (typeUser.profile_admin === false) {
+            throw ({ message: ('Access denied, login as an admin user.') });
+
+
+
+        }
 
         const { page = 1 } = data.query;
 

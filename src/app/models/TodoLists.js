@@ -4,6 +4,12 @@ class todoLists extends Model {
     static init(sequelize) {
         super.init(
             {
+                id: {
+                    allowNull: false,
+                    primaryKey: true,
+                    type: Sequelize.UUID,
+                    defaultValue: Sequelize.UUIDV4,
+                },
                 name: Sequelize.STRING,
                 enabled: Sequelize.BOOLEAN,
 

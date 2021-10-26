@@ -1,27 +1,52 @@
 import CreateUsers from '../services/UsersService';
 
 class UsersController {
-    async store(req, res) {
+    async store(req, res, next) {
         console.log(req);
-        // try {
-        const dataUser = {
-            name: req.name,
-            email: req.email,
-            password: req.password,
-            profile_admin: true,
-            enabled: true,
-        };
-        console.log(dataUser);
+        try {
+            const dataUser = {
+                name: req.body.name,
+                email: req.body.email,
+                password: req.body.password,
+                profile_admin: false,
 
-        const createUser = new CreateUsers();
+            };
+            console.log(dataUser);
 
-        const newUser = await createUser.createusers(dataUser);
+            const createUser = new CreateUsers();
 
-        return res.json(newUser);
-        // } catch (error) {
-        //     res.status(400).json({ error: error.message });
-        throw error.message;
-        // }
+            const result = await createUser.Createusers(dataUser);
+
+            return res.json({ sucess: true, data: result.name });
+        } catch (error) {
+
+
+            next(error);
+        }
+    }
+
+    async Createadmin(req, res, next) {
+
+        try {
+            const dataUser = {
+                name: req.body.name,
+                email: req.body.email,
+                password: req.body.password,
+                profile_admin: true,
+
+            };
+            console.log(dataUser);
+
+            const createAdmin = new CreateUsers();
+
+            const result = await createAdmin.Createusers(dataUser);
+
+            return res.json({ sucess: true, data: result.name });
+        } catch (error) {
+
+
+            next(error);
+        }
     }
 }
 export default new UsersController();

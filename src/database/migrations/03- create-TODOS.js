@@ -2,21 +2,22 @@ module.exports = {
     up: async (queryInterface, Sequelize) => {
         await queryInterface.createTable('todoEntries', {
             id: {
-                type: Sequelize.INTEGER,
+                type: Sequelize.UUID,
                 allowNull: false,
-                autoIncrement: true,
                 primaryKey: true,
+                defaultValue: Sequelize.UUID,
             },
 
+
             todolists_id: {
-                type: Sequelize.INTEGER,
+                type: Sequelize.UUID,
                 allowNull: true,
                 references: { model: 'todoLists', key: 'id' },
                 onUpdate: 'CASCADE',
                 onDelete: 'SET NULL',
             },
             user_id: {
-                type: Sequelize.INTEGER,
+                type: Sequelize.UUID,
                 allowNull: true,
                 references: { model: 'users', key: 'id' },
                 onUpdate: 'CASCADE',

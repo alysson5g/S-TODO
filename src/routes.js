@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import UsersAdminController from './app/controllers/UsersAdminController';
+import UsersController from './app/controllers/UsersController';
 import TodoListsController from "./app/controllers/TodoListsController";
 import TodoEntriesController from "./app/controllers/TodoEntriesController";
 
@@ -17,8 +17,8 @@ const routes = new Router();
 
 
 
-routes.post('/create/users', UsersAdminController.store);
-
+routes.post('/create/users', UsersController.store);
+routes.post('/create/users/admin', UsersController.Createadmin);
 
 routes.post('/sessions', SessionController.store);
 

@@ -1,11 +1,13 @@
+
+
 module.exports = {
     up: async (queryInterface, Sequelize) => {
         await queryInterface.createTable('users', {
             id: {
-                type: Sequelize.INTEGER,
+                type: Sequelize.UUID,
                 allowNull: false,
-                autoIncrement: true,
                 primaryKey: true,
+                defaultValue: Sequelize.UUID,
             },
 
 
@@ -32,7 +34,6 @@ module.exports = {
             },
             profile_admin: {
                 type: Sequelize.BOOLEAN,
-                defaultValue: true,
                 allowNull: false,
             },
             enabled: {
