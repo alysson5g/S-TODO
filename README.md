@@ -155,7 +155,8 @@ ROTA: localhost/create/todolist
   
 }
   
-  ![Captura de tela de 2021-10-22 17-40-48](https://user-images.githubusercontent.com/62367153/138526079-161b8bee-cf00-45f8-b9be-5facef0b490c.png)
+ ![Captura de tela de 2021-10-26 17-17-24](https://user-images.githubusercontent.com/62367153/138962414-c90d60ab-48f4-4bb6-b718-7f86bdadc337.png)
+
 
   - *Complete TodosEntries*
  - Finalizar um TODO
@@ -169,7 +170,8 @@ ROTA: localhost/create/todolist
   
 }
   
-  ![Captura de tela de 2021-10-22 17-55-26](https://user-images.githubusercontent.com/62367153/138527239-196a43f5-fa93-49ab-bac7-98c02ebbaa81.png)
+  ![Captura de tela de 2021-10-26 17-18-36](https://user-images.githubusercontent.com/62367153/138962563-29d2e65a-75cf-4920-bec9-d57d21a6f3d7.png)
+
 
  - *Update TodosEntries*
  - Atualizar um TODO
