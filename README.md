@@ -93,6 +93,20 @@ Exemplo Body:
 }
   ![Captura de tela de 2021-10-22 16-59-27](https://user-images.githubusercontent.com/62367153/138522609-a71baf55-5bca-4421-b207-36f1d032e1de.png)
 
+ - *Create ADMIN*
+ - Criar usuario ADMINISTRADOR
+
+ ROTA:  localhost/create/users/admin
+
+Exemplo Body: 
+  
+{
+	"name":"Fulano Administrador",
+  "password":"321",
+	"email":"usuarioadmin1@gmail.com"
+}
+	![Captura de tela de 2021-10-26 16-56-02](https://user-images.githubusercontent.com/62367153/138960028-409f012b-f7f5-40eb-a79c-5d5045a3f2eb.png)
+
   
   - *Login User*
  - Realizar login do usuário criar Token de Autenticação.
@@ -130,6 +144,7 @@ ROTA: localhost/create/todolist
 
   ROTA: localhost/create/todoentries
   
+   Exemplo Body: 
   
   {
   					"title": "Exemplo de tarefa pendente",
@@ -146,6 +161,8 @@ ROTA: localhost/create/todolist
  - Finalizar um TODO
   
   ROTA: localhost/complete/todoentries
+	
+   Exemplo Body: 
   
   { "id": 1,
   "completed": true
@@ -154,6 +171,50 @@ ROTA: localhost/create/todolist
   
   ![Captura de tela de 2021-10-22 17-55-26](https://user-images.githubusercontent.com/62367153/138527239-196a43f5-fa93-49ab-bac7-98c02ebbaa81.png)
 
+ - *Update TodosEntries*
+ - Atualizar um TODO
+  
+  ROTA: localhost/update/todoentries
+	
+   Exemplo Body: 
+  
+{						
+	"id": "36d5adcb-bd1e-4717-80bf-a38b1b2c25fa",
+	"title": "Novo titulo atualizado",
+	"todolists_id": "de371b6c-ab5b-4b68-854b-5a97bdbeff74",
+	"description": "Descrição atualizada",
+   	"due_date": "10/10/2021" 
+          
+  
+}
+	![Captura de tela de 2021-10-26 17-02-41](https://user-images.githubusercontent.com/62367153/138960524-17698d2b-bd1d-4ddd-88e8-669c7639cc3c.png)
+
+ - *GET TodosEntries*
+ - Listar os TODOS do Usuário logado
+  
+  ROTA: localhost/todos/user
+  
+   ![Captura de tela de 2021-10-26 17-08-19](https://user-images.githubusercontent.com/62367153/138961242-525a7712-cbec-4abe-92fb-12ea5bfdf7a0.png)
+	
+ - *GET ADMIN TodosEntries*
+ - Listar os TODOS de todos os usuários
+ - Filtrar TODOS em atraso
+	
+	Obs: Para listar apenas os atrasados colocar "filter" como true
+  
+  ROTA: localhost/todos
+	
+   Exemplo Body: 
+	
+  {						
+
+          "filter": true
+  
+  }
+	
+  ![Captura de tela de 2021-10-26 17-14-21](https://user-images.githubusercontent.com/62367153/138961960-e74ca67d-e0d2-44c1-a280-cc5690e6de75.png)
+
+	
   
 <a id="como-contribuir"></a>
 
