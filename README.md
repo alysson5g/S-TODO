@@ -95,7 +95,7 @@ Exemplo Body:
 }
   
 
- - *Create ADMIN*
+ #### *Create ADMIN*
  - Criar usuario ADMINISTRADOR
 
  ROTA:  http://localhost:3333/web/v1/signup/admin
@@ -110,7 +110,7 @@ Exemplo Body:
 	
 
   
-  - *Login User*
+  #### *Login User*
  - Realizar login do usuário criar Token de Autenticação.
   
   ROTA: http://localhost:3333/web/v1/signin
@@ -122,7 +122,7 @@ Exemplo Body:
 	"password":"??????????"
 }
 
-   - *RefreshToken*
+  #### *RefreshToken*
  - Renovar Token.
 	
   OBS: Informar token revogado para gerar renovação
@@ -132,7 +132,7 @@ Exemplo Body:
 
 
   
-- *Create TodosList*
+ #### *Create TodosList*
  - Criar Lista de TODOS
 
 OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
@@ -150,7 +150,7 @@ ROTA: http://localhost:3333/web/v1/todolist/create
  
 
   
-  - *Create TodosEntries*
+  #### *Create TodosEntries*
  - Criar um TODO
 
 OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
@@ -170,7 +170,7 @@ OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, inf
   
 
 
-  - *Complete TodosEntries*
+ #### *Complete TodosEntries*
  - Finalizar um TODO
   
 OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
@@ -186,7 +186,7 @@ OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, inf
   
   
 
- - *Update TodosEntries*
+ #### *Update TodosEntries*
  - Atualizar um TODO
   
 OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
@@ -205,7 +205,7 @@ OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, inf
   
 }
 	
- - *GET TodosEntries*
+ #### *GET TodosEntries*
  - Listar os TODOS do Usuário logado
   
 OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
@@ -214,7 +214,7 @@ OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, inf
   
    
 	
- - *GET ADMIN TodosEntries*
+ #### *GET ADMIN TodosEntries*
  - Listar os TODOS de todos os usuários
  - Filtrar TODOS em atraso
 	
