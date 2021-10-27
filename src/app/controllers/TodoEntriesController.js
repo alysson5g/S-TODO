@@ -8,125 +8,125 @@ import ServicetodoEntries from '../services/TodoEntriesService';
 class TodoEntriesController {
 
 
-    async index(req, res, next) {
+  async index(req, res, next) {
 
-        try {
-            console.log(req.userId)
-            const findTodoEntries = new ServicetodoEntries();
+    try {
+      console.log(req.userId)
+      const findTodoEntries = new ServicetodoEntries();
 
-            const newFindTodo = await findTodoEntries.findAdmTodo(req);
-
-
-            return res.json({ sucess: true, data: newFindTodo });
-        } catch (error) {
+      const newFindTodo = await findTodoEntries.findAdmTodo(req);
 
 
-            next(error);
-        }
+      return res.json({ sucess: true, data: newFindTodo });
+    } catch (error) {
+
+
+      next(error);
     }
+  }
 
-    async indexMyTodo(req, res, next) {
+  async indexMyTodo(req, res, next) {
 
-        try {
-            console.log(req.userId)
-            const findTodoEntries = new ServicetodoEntries();
+    try {
+      console.log(req.userId)
+      const findTodoEntries = new ServicetodoEntries();
 
-            const newFindTodo = await findTodoEntries.findMyTodo(req);
-
-
-            return res.json({ sucess: true, data: newFindTodo });
-        } catch (error) {
+      const newFindTodo = await findTodoEntries.findMyTodo(req);
 
 
-            next(error);
-        }
+      return res.json({ sucess: true, data: newFindTodo });
+    } catch (error) {
+
+
+      next(error);
     }
+  }
 
 
-    async store(req, res, next) {
+  async store(req, res, next) {
 
-        try {
-
-
-            const dataTodoEntries = {
-
-                title: req.body.title,
-                todolists_id: req.body.todolists_id,
-                user_id: req.userId,
-                description: req.body.description,
-                due_date: req.body.due_date,
-                completed: false,
-                enabled: true,
-            };
+    try {
 
 
+      const dataTodoEntries = {
 
-
-            const createTodoEntries = new ServicetodoEntries();
-
-            const newTodoEntries = await createTodoEntries.Createtodoentries(dataTodoEntries);
+        title: req.body.title,
+        todolists_id: req.body.todolists_id,
+        user_id: req.userId,
+        description: req.body.description,
+        due_date: req.body.due_date,
+        completed: false,
+        enabled: true,
+      };
 
 
 
 
+      const createTodoEntries = new ServicetodoEntries();
 
-            return res.json({ sucess: true, data: newTodoEntries });
-        } catch (error) {
+      const newTodoEntries = await createTodoEntries.Createtodoentries(dataTodoEntries);
 
 
-            next(error);
-        }
+
+
+
+      return res.json({ sucess: true, data: newTodoEntries });
+    } catch (error) {
+
+
+      next(error);
     }
+  }
 
-    async completeTodo(req, res, next) {
+  async completeTodo(req, res, next) {
 
-        try {
+    try {
 
-            const completeTodoEntries = new ServicetodoEntries();
-
-
-
-            const newCompleteTodoEntries = await completeTodoEntries.Completetodoentries(req.body);
-
-            const result = {
-                newCompleteTodoEntries
-
-            }
+      const completeTodoEntries = new ServicetodoEntries();
 
 
 
-            return res.json({ sucess: true, data: result });
-        } catch (error) {
+      const newCompleteTodoEntries = await completeTodoEntries.Completetodoentries(req.body);
+
+      const result = {
+        newCompleteTodoEntries
+
+      }
 
 
-            next(error);
-        }
+
+      return res.json({ sucess: true, data: result });
+    } catch (error) {
+
+
+      next(error);
     }
+  }
 
 
-    async updateTodo(req, res, next) {
+  async updateTodo(req, res, next) {
 
-        try {
+    try {
 
-            const updateTodoEntries = new ServicetodoEntries();
-
-
-
-            const newUpdateTodoEntries = await updateTodoEntries.Updatetodoentries(req.body);
-
-            const result = {
-                newUpdateTodoEntries
-            }
+      const updateTodoEntries = new ServicetodoEntries();
 
 
 
-            return res.json({ sucess: true, data: result });
-        } catch (error) {
+      const newUpdateTodoEntries = await updateTodoEntries.Updatetodoentries(req.body);
+
+      const result = {
+        newUpdateTodoEntries
+      }
 
 
-            next(error);
-        }
+
+      return res.json({ sucess: true, data: result });
+    } catch (error) {
+
+
+      next(error);
     }
+  }
 
 }
 export default new TodoEntriesController();

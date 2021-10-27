@@ -28,7 +28,7 @@ routes.post('/web/v1/signin', SessionController.store);
 //RefreshToken
 routes.post('/web/v1/refresh', RefreshtokenController.store);
 
-//Autenticação 
+//Autenticação
 routes.use(authMiddleware);
 
 //Criar Lista de TODOS

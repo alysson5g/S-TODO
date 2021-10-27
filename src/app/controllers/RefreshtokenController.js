@@ -1,4 +1,4 @@
-import Jwt from 'jsonwebtoken';
+import Jwt from "jsonwebtoken";
 import { promisify } from 'util';
 
 import User from '../models/Users';
@@ -39,15 +39,15 @@ class Authrefreshtoken {
       }
 
       const startToken = new JwtHelper();
-      const NewToken = await startToken.singAcessToken(user);
+      const newToken = await startToken.singAcessToken(user);
 
-      const NewRefreshToken = await startToken.singAcessRefreshToken(user);
+      const newRefreshToken = await startToken.singAcessRefreshToken(user);
 
-      console.log(NewToken);
-      console.log(NewRefreshToken);
+      console.log(newToken);
+      console.log(newRefreshToken);
       return res.json({
-        NewToken,
-        NewRefreshToken,
+        newToken,
+        newRefreshToken,
       });
     } catch (error) {
       res.status(400).json({ error: error.message });

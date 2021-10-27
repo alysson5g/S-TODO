@@ -8,37 +8,37 @@ import CreateTodoList from '../services/TodoListsService';
 class TodoListController {
 
 
-    async store(req, res, next) {
+  async store(req, res, next) {
 
-        try {
+    try {
 
-            const dataTodoList = {
+      const dataTodoList = {
 
-                name: req.body.name,
+        name: req.body.name,
 
-            };
-
-
-
-
-            const createTodoList = new CreateTodoList();
-
-            const newTodoList = await createTodoList.Createtodolists(dataTodoList);
-
-            const result = {
-                name: newTodoList.name,
-                id: newTodoList.id
-
-            }
+      };
 
 
 
-            return res.json({ sucess: true, data: result });
-        } catch (error) {
+
+      const createTodoList = new CreateTodoList();
+
+      const newTodoList = await createTodoList.Createtodolists(dataTodoList);
+
+      const result = {
+        name: newTodoList.name,
+        id: newTodoList.id
+
+      }
 
 
-            next(error);
-        }
+
+      return res.json({ sucess: true, data: result });
+    } catch (error) {
+
+
+      next(error);
     }
+  }
 }
 export default new TodoListController();
