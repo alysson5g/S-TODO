@@ -16,26 +16,35 @@ const routes = new Router();
 
 
 
+// Criar Usuário
+routes.post('/web/v1/signup', UsersController.store);
 
-routes.post('/create/users', UsersController.store);
-routes.post('/create/users/admin', UsersController.Createadmin);
+//Criar Usuário Administrador
+routes.post('/web/v1/signup/admin', UsersController.Createadmin);
 
-routes.post('/sessions', SessionController.store);
+// Login
+routes.post('/web/v1/signin', SessionController.store);
 
-routes.post('/refresh', RefreshtokenController.store);
+//RefreshToken
+routes.post('/web/v1/refresh', RefreshtokenController.store);
 
+//Autenticação 
 routes.use(authMiddleware);
 
-routes.post('/create/todolist', TodoListsController.store);
-routes.post('/create/todoentries', TodoEntriesController.store);
+//Criar Lista de TODOS
+routes.post('/web/v1/todolist/create', TodoListsController.store);
 
-routes.put('/complete/todoentries', TodoEntriesController.completeTodo);
 
-routes.put('/update/todoentries', TodoEntriesController.updateTodo);
+//Rotas de TODOS
+routes.post('/web/v1/todoentries/create', TodoEntriesController.store);
 
-routes.get('/todos', TodoEntriesController.index);
-//routes.put('/users/:id', UsersAdminController.update);
-routes.get('/todos/user', TodoEntriesController.indexMyTodo);
+routes.put('/web/v1/todoentries/complete', TodoEntriesController.completeTodo);
+
+routes.put('/web/v1/todoentries/update', TodoEntriesController.updateTodo);
+
+routes.get('/web/v1/todoentries', TodoEntriesController.index);
+
+routes.get('/web/v1/todoentries/user', TodoEntriesController.indexMyTodo);
 
 
 export default routes;

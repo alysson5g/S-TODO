@@ -47,7 +47,7 @@ class TodoEntriesController {
 
         try {
 
-            console.log(req.userId);
+
             const dataTodoEntries = {
 
                 title: req.body.title,
