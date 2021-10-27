@@ -48,9 +48,9 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
   - Também, é **preciso** ter um gerenciador de pacotes seja o **[NPM](https://www.npmjs.com/)** ou **[Yarn](https://yarnpkg.com/)**.
   - Por fim, é **essencial** ter o **[Docker](https://www.docker.com/get-started)** instalado de forma global na máquina
 	
-# Observação: Como estamos trabalhando uma aplicação com finalizadade de teste, disponibilizei
+  Observação: Como estamos trabalhando uma aplicação com finalidade de teste, disponibilizei
   o arquivo .env no repositório para facilitar a execução deste teste. 
-  Deixando claro a conciencia de não ser uma boa pratica para aplicações reais. 
+  Deixando claro a conciencia de não ser uma boa pratica para aplicações reais em produção.
 
 
 1. Faça um clone :
@@ -68,7 +68,9 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 
   ## Crie o banco de dados
   $ docker run -d --name dbubi -p 3306:3306 -e MYSQL_DATABASE=testeubi -e MYSQL_USER=ubistart -e MYSQL_PASSWORD=321 mysql
+	
   $ docker run --name redisUbistart -p 7051:6379 -d redis
+	
   $ yarn sequelize-cli db:migrate
    
 
@@ -93,6 +95,20 @@ Exemplo Body:
 }
   ![Captura de tela de 2021-10-22 16-59-27](https://user-images.githubusercontent.com/62367153/138522609-a71baf55-5bca-4421-b207-36f1d032e1de.png)
 
+ - *Create ADMIN*
+ - Criar usuario ADMINISTRADOR
+
+ ROTA:  localhost/create/users/admin
+
+Exemplo Body: 
+  
+{
+	"name":"Fulano Administrador",
+  "password":"321",
+	"email":"usuarioadmin1@gmail.com"
+}
+	![Captura de tela de 2021-10-26 16-56-02](https://user-images.githubusercontent.com/62367153/138960028-409f012b-f7f5-40eb-a79c-5d5045a3f2eb.png)
+
   
   - *Login User*
  - Realizar login do usuário criar Token de Autenticação.
@@ -112,6 +128,8 @@ Exemplo Body:
 - *Create TodosList*
  - Criar Lista de TODOS
 
+OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
+
 ROTA: localhost/create/todolist
   
   Exemplo Body: 
@@ -128,8 +146,11 @@ ROTA: localhost/create/todolist
   - *Create TodosEntries*
  - Criar um TODO
 
+OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
+	
   ROTA: localhost/create/todoentries
   
+   Exemplo Body: 
   
   {
   					"title": "Exemplo de tarefa pendente",
@@ -140,20 +161,77 @@ ROTA: localhost/create/todolist
   
 }
   
-  ![Captura de tela de 2021-10-22 17-40-48](https://user-images.githubusercontent.com/62367153/138526079-161b8bee-cf00-45f8-b9be-5facef0b490c.png)
+ ![Captura de tela de 2021-10-26 17-17-24](https://user-images.githubusercontent.com/62367153/138962414-c90d60ab-48f4-4bb6-b718-7f86bdadc337.png)
+
 
   - *Complete TodosEntries*
  - Finalizar um TODO
   
+OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
+	
   ROTA: localhost/complete/todoentries
+	
+   Exemplo Body: 
   
   { "id": 1,
   "completed": true
   
 }
   
-  ![Captura de tela de 2021-10-22 17-55-26](https://user-images.githubusercontent.com/62367153/138527239-196a43f5-fa93-49ab-bac7-98c02ebbaa81.png)
+  ![Captura de tela de 2021-10-26 17-18-36](https://user-images.githubusercontent.com/62367153/138962563-29d2e65a-75cf-4920-bec9-d57d21a6f3d7.png)
 
+
+ - *Update TodosEntries*
+ - Atualizar um TODO
+  
+OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
+	
+  ROTA: localhost/update/todoentries
+	
+   Exemplo Body: 
+  
+{						
+	"id": "36d5adcb-bd1e-4717-80bf-a38b1b2c25fa",
+	"title": "Novo titulo atualizado",
+	"todolists_id": "de371b6c-ab5b-4b68-854b-5a97bdbeff74",
+	"description": "Descrição atualizada",
+   	"due_date": "10/10/2021" 
+          
+  
+}
+	![Captura de tela de 2021-10-26 17-02-41](https://user-images.githubusercontent.com/62367153/138960524-17698d2b-bd1d-4ddd-88e8-669c7639cc3c.png)
+
+ - *GET TodosEntries*
+ - Listar os TODOS do Usuário logado
+  
+OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
+	
+  ROTA: localhost/todos/user
+  
+   ![Captura de tela de 2021-10-26 17-08-19](https://user-images.githubusercontent.com/62367153/138961242-525a7712-cbec-4abe-92fb-12ea5bfdf7a0.png)
+	
+ - *GET ADMIN TodosEntries*
+ - Listar os TODOS de todos os usuários
+ - Filtrar TODOS em atraso
+	
+OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
+
+OBS: Para listar apenas os atrasados colocar "filter" como true
+	
+  
+  ROTA: localhost/todos
+	
+   Exemplo Body: 
+	
+  {						
+
+          "filter": true
+  
+  }
+	
+  ![Captura de tela de 2021-10-26 17-14-21](https://user-images.githubusercontent.com/62367153/138961960-e74ca67d-e0d2-44c1-a280-cc5690e6de75.png)
+
+	
   
 <a id="como-contribuir"></a>
 
