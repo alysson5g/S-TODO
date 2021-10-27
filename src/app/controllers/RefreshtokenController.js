@@ -1,7 +1,7 @@
 import Jwt from 'jsonwebtoken';
 import { promisify } from 'util';
 
-import Users from '../models/Users';
+import User from '../models/Users';
 import JwtHelper from '../helpers/JwtHelper';
 import authrefreshtoken from '../../config/authrefreshtoken';
 import { client } from '../../config/redisconfig';
@@ -9,45 +9,45 @@ import { client } from '../../config/redisconfig';
 class Authrefreshtoken {
   async store(req, res) {
     try {
-      const refreshToken = req.headers.authorization;
+      const RefreshToken = req.headers.authorization;
       console.log('posicao 1');
-      if (!refreshToken) {
+      if (!RefreshToken) {
         console.log('posicao 2');
         return res.status(401).json({ error: 'Refresh Token not provided' });
       }
       console.log('posicao 3');
-      const [, refToken] = refreshToken.split(' ');
+      const [, Reftoken] = RefreshToken.split(' ');
       const decoded = await promisify(Jwt.verify)(
-        refToken,
+        Reftoken,
         authrefreshtoken.secret
       );
-      console.log('reftoken', refToken);
+      console.log('reftoken', Reftoken);
       req.userId = decoded.id;
 
-
-      const user = await Users.findByPk(req.userId);
+      // const buscId = JSON.stringify(req.userId);
+      const user = await User.findByPk(req.userId);
       const { id } = user;
+      // console.log('client redis', client);
 
+      const Getkey = await client.get(`${id}RefreshToken`);
+      console.log(Getkey);
 
-      const getkey = await client.get(`${id}refreshToken`);
-      console.log(getkey);
-
-      if (refToken !== getkey) {
+      if (Reftoken !== Getkey) {
         return res.status(401).json({ error: ' Token not found' });
 
         // { O hash MD5 para bullinvcba2021 é: ac4e94811b83144ec156de1b811249f1
       }
 
       const startToken = new JwtHelper();
-      const newToken = await startToken.singAcessToken(user);
+      const NewToken = await startToken.singAcessToken(user);
 
-      const newRefreshToken = await startToken.singAcessRefreshToken(user);
+      const NewRefreshToken = await startToken.singAcessRefreshToken(user);
 
-      console.log(newToken);
-      console.log(newRefreshToken);
+      console.log(NewToken);
+      console.log(NewRefreshToken);
       return res.json({
-        newToken,
-        newRefreshToken,
+        NewToken,
+        NewRefreshToken,
       });
     } catch (error) {
       res.status(400).json({ error: error.message });

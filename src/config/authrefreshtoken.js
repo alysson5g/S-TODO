@@ -1,4 +1,6 @@
+require('dotenv').config();
+
 export default {
-  secret: "WXXNS9kd1NI$a4bogIAlRJcDLOndI8LlKdFFG3",
-  expiresIn: 60,
+  secret: process.env.REFRESHTOKEN,
+  expiresIn: "2d",
 };

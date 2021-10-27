@@ -36,14 +36,20 @@ routes.post('/web/v1/todolist/create', TodoListsController.store);
 
 
 //Rotas de TODOS
+
+// Criar TODOS
 routes.post('/web/v1/todoentries/create', TodoEntriesController.store);
 
+//Finalizar TODO
 routes.put('/web/v1/todoentries/complete', TodoEntriesController.completeTodo);
 
+//Alterar TODO
 routes.put('/web/v1/todoentries/update', TodoEntriesController.updateTodo);
 
+//Listar todos os TODOS para o Administrador
 routes.get('/web/v1/todoentries', TodoEntriesController.index);
 
+//Listar todos os todos criados pelo usuário logado
 routes.get('/web/v1/todoentries/user', TodoEntriesController.indexMyTodo);
 
 

@@ -8,7 +8,7 @@ const options = {
   host: process.env.REDIS_HOST,
   password: process.env.REDIS_PASS,
 };
-console.log(process.env.REDIS_HOST);
+
 const redis = {
   client: new Redis({ ...options, db: 1 }),
 };
