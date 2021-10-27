@@ -79,12 +79,12 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 
 ```
 
-- ### :twisted_rightwards_arrows: **Testando Rotas**
+ ### :twisted_rightwards_arrows: **Testando Rotas**
 
- - *Create User*
+ #### *Create User*
  - Criar usuario da Aplicação
 
- ROTA:  localhost/create/users
+ ROTA:  http://localhost:3333/web/v1/signup
 
 Exemplo Body: 
   
@@ -93,12 +93,12 @@ Exemplo Body:
   "password":"??????????",
 	"email":"usuarioexemplo@gmail.com"
 }
-  ![Captura de tela de 2021-10-22 16-59-27](https://user-images.githubusercontent.com/62367153/138522609-a71baf55-5bca-4421-b207-36f1d032e1de.png)
+  
 
- - *Create ADMIN*
+ #### *Create ADMIN*
  - Criar usuario ADMINISTRADOR
 
- ROTA:  localhost/create/users/admin
+ ROTA:  http://localhost:3333/web/v1/signup/admin
 
 Exemplo Body: 
   
@@ -107,13 +107,13 @@ Exemplo Body:
   "password":"321",
 	"email":"usuarioadmin1@gmail.com"
 }
-	![Captura de tela de 2021-10-26 16-56-02](https://user-images.githubusercontent.com/62367153/138960028-409f012b-f7f5-40eb-a79c-5d5045a3f2eb.png)
+	
 
   
-  - *Login User*
+  #### *Login User*
  - Realizar login do usuário criar Token de Autenticação.
   
-  ROTA:  localhost/sessions
+  ROTA: http://localhost:3333/web/v1/signin
   
   Exemplo Body: 
   
@@ -122,15 +122,22 @@ Exemplo Body:
 	"password":"??????????"
 }
 
-  ![Captura de tela de 2021-10-22 17-47-14](https://user-images.githubusercontent.com/62367153/138526565-3e048b2a-4dd2-4a4a-a09f-cbb3fecf361c.png)
+  #### *RefreshToken*
+ - Renovar Token.
+	
+  OBS: Informar token revogado para gerar renovação
+  
+  ROTA: http://localhost:3333/web/v1/refresh
+  
+
 
   
-- *Create TodosList*
+ #### *Create TodosList*
  - Criar Lista de TODOS
 
 OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
 
-ROTA: localhost/create/todolist
+ROTA: http://localhost:3333/web/v1/todolist/create
   
   Exemplo Body: 
   
@@ -140,15 +147,15 @@ ROTA: localhost/create/todolist
   }
   
   
-  ![Captura de tela de 2021-10-22 17-28-17](https://user-images.githubusercontent.com/62367153/138524935-65773d51-c0a5-417b-825e-77a0fd3bb234.png)
+ 
 
   
-  - *Create TodosEntries*
+  #### *Create TodosEntries*
  - Criar um TODO
 
 OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
 	
-  ROTA: localhost/create/todoentries
+  ROTA: http://localhost:3333/web/v1/todoentries/create
   
    Exemplo Body: 
   
@@ -161,15 +168,14 @@ OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, inf
   
 }
   
- ![Captura de tela de 2021-10-26 17-17-24](https://user-images.githubusercontent.com/62367153/138962414-c90d60ab-48f4-4bb6-b718-7f86bdadc337.png)
 
 
-  - *Complete TodosEntries*
+ #### *Complete TodosEntries*
  - Finalizar um TODO
   
 OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
 	
-  ROTA: localhost/complete/todoentries
+  ROTA: http://localhost:3333/web/v1/todoentries/complete
 	
    Exemplo Body: 
   
@@ -178,15 +184,14 @@ OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, inf
   
 }
   
-  ![Captura de tela de 2021-10-26 17-18-36](https://user-images.githubusercontent.com/62367153/138962563-29d2e65a-75cf-4920-bec9-d57d21a6f3d7.png)
+  
 
-
- - *Update TodosEntries*
+ #### *Update TodosEntries*
  - Atualizar um TODO
   
 OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
 	
-  ROTA: localhost/update/todoentries
+  ROTA: http://localhost:3333/web/v1/todoentries/update
 	
    Exemplo Body: 
   
@@ -199,18 +204,17 @@ OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, inf
           
   
 }
-	![Captura de tela de 2021-10-26 17-02-41](https://user-images.githubusercontent.com/62367153/138960524-17698d2b-bd1d-4ddd-88e8-669c7639cc3c.png)
-
- - *GET TodosEntries*
+	
+ #### *GET TodosEntries*
  - Listar os TODOS do Usuário logado
   
 OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
 	
-  ROTA: localhost/todos/user
+  ROTA: http://localhost:3333/web/v1/todoentries/user
   
-   ![Captura de tela de 2021-10-26 17-08-19](https://user-images.githubusercontent.com/62367153/138961242-525a7712-cbec-4abe-92fb-12ea5bfdf7a0.png)
+   
 	
- - *GET ADMIN TodosEntries*
+ #### *GET ADMIN TodosEntries*
  - Listar os TODOS de todos os usuários
  - Filtrar TODOS em atraso
 	
@@ -219,7 +223,7 @@ OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, inf
 OBS: Para listar apenas os atrasados colocar "filter" como true
 	
   
-  ROTA: localhost/todos
+  ROTA: http://localhost:3333/web/v1/todoentries
 	
    Exemplo Body: 
 	
@@ -229,8 +233,7 @@ OBS: Para listar apenas os atrasados colocar "filter" como true
   
   }
 	
-  ![Captura de tela de 2021-10-26 17-14-21](https://user-images.githubusercontent.com/62367153/138961960-e74ca67d-e0d2-44c1-a280-cc5690e6de75.png)
-
+ 
 	
   
 <a id="como-contribuir"></a>
