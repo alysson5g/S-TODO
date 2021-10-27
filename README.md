@@ -84,7 +84,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
  - *Create User*
  - Criar usuario da Aplicação
 
- ROTA:  localhost/create/users
+ ROTA:  http://localhost:3333/create/users
 
 Exemplo Body: 
   
@@ -98,7 +98,7 @@ Exemplo Body:
  - *Create ADMIN*
  - Criar usuario ADMINISTRADOR
 
- ROTA:  localhost/create/users/admin
+ ROTA:  http://localhost:3333/create/users/admin
 
 Exemplo Body: 
   
@@ -113,7 +113,7 @@ Exemplo Body:
   - *Login User*
  - Realizar login do usuário criar Token de Autenticação.
   
-  ROTA:  localhost/sessions
+  ROTA: http://localhost:3333/sessions
   
   Exemplo Body: 
   
@@ -130,7 +130,7 @@ Exemplo Body:
 
 OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
 
-ROTA: localhost/create/todolist
+ROTA: http://localhost:3333/create/todolist
   
   Exemplo Body: 
   
@@ -148,7 +148,7 @@ ROTA: localhost/create/todolist
 
 OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
 	
-  ROTA: localhost/create/todoentries
+  ROTA: http://localhost:3333/create/todoentries
   
    Exemplo Body: 
   
@@ -169,7 +169,7 @@ OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, inf
   
 OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
 	
-  ROTA: localhost/complete/todoentries
+  ROTA: http://localhost:3333/complete/todoentries
 	
    Exemplo Body: 
   
@@ -186,7 +186,7 @@ OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, inf
   
 OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
 	
-  ROTA: localhost/update/todoentries
+  ROTA: http://localhost:3333/update/todoentries
 	
    Exemplo Body: 
   
@@ -206,7 +206,7 @@ OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, inf
   
 OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, informe o token da sessão do usuário no Bearer
 	
-  ROTA: localhost/todos/user
+  ROTA: http://localhost:3333/todos/user
   
    ![Captura de tela de 2021-10-26 17-08-19](https://user-images.githubusercontent.com/62367153/138961242-525a7712-cbec-4abe-92fb-12ea5bfdf7a0.png)
 	
@@ -219,7 +219,7 @@ OBS: Para testar essa rota é nescessario que o usuário esteja autenticado, inf
 OBS: Para listar apenas os atrasados colocar "filter" como true
 	
   
-  ROTA: localhost/todos
+  ROTA: http://localhost:3333/todos
 	
    Exemplo Body: 
 	
