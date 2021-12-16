@@ -18,9 +18,9 @@
 
 ## :bookmark: Sobre
 
-O <strong>TODOS Ubistart</strong> é uma aplicação Web para registro e acompanhamento de TODOS.
+O <strong>S TODOS</strong> é uma aplicação Web para registro e acompanhamento de TODOS.
 
-Essa aplicação foi construída como teste da empresa <strong>Ubistart</strong> 
+Essa aplicação foi construída como teste
     
   
 <a id="tecnologias-utilizadas"></a>
